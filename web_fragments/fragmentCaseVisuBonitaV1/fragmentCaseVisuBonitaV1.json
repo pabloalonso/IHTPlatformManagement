@@ -1,0 +1,126 @@
+{
+  "modelVersion" : "2.2",
+  "id" : "fragmentCaseVisuBonitaV1",
+  "name" : "fragmentCaseVisuBonitaV1",
+  "lastUpdate" : 1657092386766,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "value" : {
+            "type" : "constant",
+            "value" : "This is the initial value"
+          },
+          "color" : {
+            "type" : "constant",
+            "value" : "RebeccaPurple"
+          },
+          "background" : {
+            "type" : "constant",
+            "value" : "Yellow"
+          },
+          "diagram" : {
+            "type" : "variable",
+            "value" : "currentDiagram"
+          },
+          "caseInfo" : {
+            "type" : "variable",
+            "value" : "currentCaseInfo"
+          },
+          "flowNodesInfo" : {
+            "type" : "variable",
+            "value" : "flowNodesInfo"
+          }
+        },
+        "reference" : "3d488dfc-a624-4777-9d95-d64a04c4f256",
+        "hasValidationError" : false,
+        "id" : "customBpmnVisuV1"
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "76d89b21-6a30-46ca-a0fd-91c1ebdb2c5f",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "a1057704-ca23-4eb6-ab72-96ee21c28965",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "currentDiagram" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/diagram/{{currentIds.processId}}"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "allCaseInfo" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "    \"id\": 3001,",
+        "    \"flowNodeStatesCounters\": {",
+        "        \"Complete quotation\": {",
+        "            \"failed\": 1,",
+        "            \"executing\": 1,",
+        "            \"completing\": 1,",
+        "            \"initializing\": 1,",
+        "            \"ready\": 1,",
+        "            \"waiting\": 1,",
+        "            \"completed\": 1,",
+        "            \"cancelled\": 1,",
+        "            \"skipped\": 1",
+        "        },",
+        "        \"Create quotation for each selected suppliers\": {",
+        "            \"completed\": 1",
+        "        }",
+        "    }",
+        "    ",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "flowNodesInfo" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/caseInfo/{{currentIds.caseId}}"
+      ],
+      "advancedOptions" : { },
+      "exposed" : false
+    },
+    "currentIds" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    }
+  },
+  "hasValidationError" : false,
+  "type" : "fragment"
+}
